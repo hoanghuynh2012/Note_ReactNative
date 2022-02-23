@@ -32,8 +32,8 @@ http://facebook.github.io/react-native/docs/running-on-device.html#method-2-conn
 
 # adb
 
-adb device
-adb logcat
+- adb device
+- adb logcat
 
 # Update version React Native
 
@@ -47,12 +47,16 @@ https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 
 - Props là cách để bạn có thể truyền dữ liệu từ component cha xuống component con.
 - Example:
-  - <ClickMe name="Click me" />
-  - const ClickMe = (props) => {
-    <View>
-    <Text>props.name</Text>
-    </View>
-    }
+  - ```
+    <ClickMe name="Click me" />
+    ```
+  - ```
+    const ClickMe = (props) => {
+      <View>
+      <Text>props.name</Text>
+      </View>
+      }
+    ```
 
 # State
 
@@ -75,7 +79,9 @@ https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
       //function
       });
     ```
-  - setCount(count + 1);```
+  - ```
+    setCount(count + 1);
+    ```
 
 ## useEffect
 
@@ -88,16 +94,15 @@ https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 - Luôn luôn chạy khi component được mount.
 - Có 3 dependencies chính là [], [dependencies] và không truyên
 - Example
-  -```
-  useEffect(() => {
-  //componentDidMount & componentDidUpdate
-  // your code
-  return () =>{
-  //componentWillUnMount
-  }
-  },[] or [dependencies] or )
-
-````
+  - ```
+    useEffect(() => {
+    //componentDidMount & componentDidUpdate
+    // your code
+    return () =>{
+    //componentWillUnMount
+    }
+    },[] or [dependencies] or )
+    ```
 
 ## useMemo
 
@@ -106,9 +111,9 @@ https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 - Tránh chạy các hàm tính toán lại nếu k có sự thay đổi của dependencies.
 - Example
   - ```
-  const example = useMemo(() => {
-    // function
-    },[dependencies])
+    const example = useMemo(() => {
+      // function
+      },[dependencies])
     ```
 
 ## useRef
@@ -119,9 +124,11 @@ https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 - Không làm Rerender như useState
 - Example
   - ```
-  const example = useRef(0);```
-  -
-  ```example.current;```
+    const example = useRef(0);
+    ```
+  - ```
+    example.current;
+    ```
 
 ## useCallback
 
@@ -129,17 +136,21 @@ https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 - Không tạo lại tham chiếu mới
 - Xài khi function đó được truyền từ cha và con
 - Example
-  - const example = useCallback(() => {
-    // function
-    })
+  - ```
+    const example = useCallback(() => {
+     // function
+     })
+    ```
 
 # React.Memo
 
 - Lưu input của component đó khi có sự thay đổi prop mới render lại
 - Example
-  - const example = React.memo((props) {
-    // return
-    });
+  - ```
+    const example = React.memo((props) {
+      // return
+      });
+    ```
 
 # ES6
 
@@ -148,4 +159,7 @@ https://github.com/lukehoban/es6features
 # Javascript Interview Questions
 
 https://www.interviewbit.com/javascript-interview-questions?fbclid=IwAR3140uhzPwvaFY60t2qb66Gj-bx_R0JvYr2_dcshC0zMpX831tRAHT-3sI
-````
+
+```
+
+```
