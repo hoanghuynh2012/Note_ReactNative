@@ -20,20 +20,25 @@ https://imageoptim.com/mac
 
 https://overapi.com/
 
-# Run device by Wifi
+# ES6
 
-Connect device via wifi
-http://facebook.github.io/react-native/docs/running-on-device.html#method-2-connect-via-wi-fi
+https://github.com/lukehoban/es6features
 
-1. Connect your mobile device via usb (just this once)
-2. Establish a port with your mobile device using 'adb tcpip <port number>'. eg. adb tcpip 5555
-3. Remove USB and 'adb connect <mobile device ip><above mentioned port number>'. Eg . adb connect 192.160.0.124:5555
-4. 'React-native run-android' in your project folder
+# Javascript Interview Questions
 
-# adb
+https://www.interviewbit.com/javascript-interview-questions?fbclid=IwAR3140uhzPwvaFY60t2qb66Gj-bx_R0JvYr2_dcshC0zMpX831tRAHT-3sI
 
-- adb device
-- adb logcat
+# Json severe
+
+https://github.com/typicode/json-server
+
+# React native not running on M1
+
+https://gist.github.com/ildfreelancer/c161628115e590749599ceb6e623125c
+
+# React Native vs TypeScript
+
+https://github.com/anywhichway/nano-memoize
 
 # Update version React Native
 
@@ -142,6 +147,31 @@ https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
      })
     ```
 
+## useContext
+
+- Truyền giá trị từ component cha đến component cháu mà không cần qua props và không đi qua component con
+- Example
+
+```
+  import React, {createContext} from 'react';
+
+  const ThemeContext = React.createContext();
+
+  const example = () => {
+    <ThemeContext.Provider value='dark'>
+     <View>
+        // your code
+     </View>
+    </ThemeContext.Provider>
+  }
+
+How to Use It
+
+  import {useContext} from 'react';
+
+  const theme = useContext(ThemeContext);
+```
+
 # React.Memo
 
 - Lưu input của component đó khi có sự thay đổi prop mới render lại
@@ -155,26 +185,45 @@ https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 # Scale font in numbers
 
 ```
+
 Text.defaultProps = {
-  ...(Text.defaultProps || {}),
-  allowFontScaling: true,
-  maxFontSizeMultiplier: ${number},
+...(Text.defaultProps || {}),
+allowFontScaling: true,
+maxFontSizeMultiplier: ${number},
 };
 TextInput.defaultProps = {
-  ...(TextInput.defaultProps || {}),
-  allowFontScaling: true,
-  maxFontSizeMultiplier: ${number},
+...(TextInput.defaultProps || {}),
+allowFontScaling: true,
+maxFontSizeMultiplier: ${number},
 };
+
 ```
 
-# ES6
+# Axios request not working in IOS simulator (React Native)
 
-https://github.com/lukehoban/es6features
+- Update your Info.plist with :
 
-# Javascript Interview Questions
+```
 
-https://www.interviewbit.com/javascript-interview-questions?fbclid=IwAR3140uhzPwvaFY60t2qb66Gj-bx_R0JvYr2_dcshC0zMpX831tRAHT-3sI
+<key>NSAppTransportSecurity</key>
+<dict>
+<key>NSAllowsArbitraryLoads</key>
+<true/>
+</dict>
 
-# Json severe
+```
 
-https://github.com/typicode/json-server
+# Run device by Wifi
+
+Connect device via wifi
+http://facebook.github.io/react-native/docs/running-on-device.html#method-2-connect-via-wi-fi
+
+1. Connect your mobile device via usb (just this once)
+2. Establish a port with your mobile device using 'adb tcpip <port number>'. eg. adb tcpip 5555
+3. Remove USB and 'adb connect <mobile device ip><above mentioned port number>'. Eg . adb connect 192.160.0.124:5555
+4. 'React-native run-android' in your project folder
+
+# adb
+
+- adb device
+- adb logcat
