@@ -92,7 +92,7 @@ https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
   - setTimeout, setInterval, ...
 - Có 2 tham số là 1 function và 1 dependencies.
 - Luôn luôn chạy khi component được mount.
-- Có 3 dependencies chính là [], [dependencies] và không truyên
+- Có 3 dependencies chính là [], [dependencies] và không truyền
 - Example
   - ```
     useEffect(() => {
@@ -151,6 +151,21 @@ https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
       // return
       });
     ```
+
+# Scale font in numbers
+
+```
+Text.defaultProps = {
+  ...(Text.defaultProps || {}),
+  allowFontScaling: true,
+  maxFontSizeMultiplier: ${number},
+};
+TextInput.defaultProps = {
+  ...(TextInput.defaultProps || {}),
+  allowFontScaling: true,
+  maxFontSizeMultiplier: ${number},
+};
+```
 
 # ES6
 
