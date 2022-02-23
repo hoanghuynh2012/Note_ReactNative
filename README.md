@@ -48,6 +48,15 @@ https://react-native-community.github.io/upgrade-helper/
 
 https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 
+- Mounting:
+  - componentWillMount: được thực thi trước khi giao diện được render ra màn hình (tạo ra các state và giao diện)
+  - componentDidMount: được thực thi sau khi render đầu tiên được sinh ra ở phía client (dùng để call API, setTimeout, setInterval, thay đổi state, props,... )
+- Update:
+  - componentWillUpdate: được gọi trước khi component được rendering (update state, props)
+  - componentDidUpdate: được gọi sau khi component được rendering ( sau khi re-render thành công)
+- Unmount:
+  - componentWillUnmount: được gọi sau khi component unmount từ dom ( bước cuôi xong hết mọi thứ)
+
 # Props
 
 - Props là cách để bạn có thể truyền dữ liệu từ component cha xuống component con.
@@ -126,7 +135,7 @@ https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 - Lưu lại tham chiếu
 - Truy xuất vào DOM
 - Không bị khởi tạo lại như object
-- Không làm Rerender như useState
+- Không làm re-render như useState
 - Example
   - ```
     const example = useRef(0);
