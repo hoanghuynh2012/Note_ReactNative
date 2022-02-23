@@ -70,10 +70,12 @@ https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 - Gồm 2 phần là tên của state và 1 method để cập nhật lại state
 - Muốn thay đổi trên giao diện thì sử dụng useState thay vì useRef
 - Example
-  - const [count, setCount] = useState(0) or const [count, setCount] = useState(() => {
-    //function
-    });
-  - setCount(count + 1);
+  - ```
+    const [count, setCount] = useState(0) or const [count, setCount] = useState(() => {
+      //function
+      });
+    ```
+  - setCount(count + 1);```
 
 ## useEffect
 
@@ -86,13 +88,16 @@ https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 - Luôn luôn chạy khi component được mount.
 - Có 3 dependencies chính là [], [dependencies] và không truyên
 - Example
-  - useEffect(() => {
-    //componentDidMount & componentDidUpdate
-    // your code
-    return () =>{
-    //componentWillUnMount
-    }
-    },[] or [dependencies] or )
+  -```
+  useEffect(() => {
+  //componentDidMount & componentDidUpdate
+  // your code
+  return () =>{
+  //componentWillUnMount
+  }
+  },[] or [dependencies] or )
+
+````
 
 ## useMemo
 
@@ -100,9 +105,11 @@ https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 - Có 2 tham số là 1 function và 1 dependencies.
 - Tránh chạy các hàm tính toán lại nếu k có sự thay đổi của dependencies.
 - Example
-  - const example = useMemo(() => {
+  - ```
+  const example = useMemo(() => {
     // function
     },[dependencies])
+    ```
 
 ## useRef
 
@@ -111,8 +118,10 @@ https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 - Không bị khởi tạo lại như object
 - Không làm Rerender như useState
 - Example
-  - const example = useRef(0);
-  - example.current;
+  - ```
+  const example = useRef(0);```
+  -
+  ```example.current;```
 
 ## useCallback
 
@@ -139,3 +148,4 @@ https://github.com/lukehoban/es6features
 # Javascript Interview Questions
 
 https://www.interviewbit.com/javascript-interview-questions?fbclid=IwAR3140uhzPwvaFY60t2qb66Gj-bx_R0JvYr2_dcshC0zMpX831tRAHT-3sI
+````
