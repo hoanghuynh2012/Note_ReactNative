@@ -32,6 +32,14 @@ https://www.interviewbit.com/javascript-interview-questions?fbclid=IwAR3140uhzPw
 
 https://github.com/typicode/json-server
 
+# Design pattern
+
+https://github.com/ildfreelancer/design-pattern
+
+# Template React native
+
+https://github.com/MasonLe2497/BoilerplateReactNative
+
 # React native not running on M1
 
 https://gist.github.com/ildfreelancer/c161628115e590749599ceb6e623125c
