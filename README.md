@@ -36,6 +36,9 @@ https://github.com/typicode/json-server
 
 https://github.com/ildfreelancer/design-pattern
 
+# JavaScript Style Guide()
+https://github.com/airbnb/javascript
+
 # Template React native
 
 https://github.com/MasonLe2497/BoilerplateReactNative
@@ -244,3 +247,7 @@ http://facebook.github.io/react-native/docs/running-on-device.html#method-2-conn
 
 - adb device
 - adb logcat
+
+# Terminal command
+
+https://tichil.notion.site/Nh-ng-c-u-l-nh-Terminal-h-u-ch-52054b94453e4d9fa7b430f5d616d993
