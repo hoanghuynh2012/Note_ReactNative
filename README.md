@@ -28,7 +28,7 @@ https://github.com/lukehoban/es6features
 
 https://www.interviewbit.com/javascript-interview-questions?fbclid=IwAR3140uhzPwvaFY60t2qb66Gj-bx_R0JvYr2_dcshC0zMpX831tRAHT-3sI
 
-# Json severe
+# Json server
 
 https://github.com/typicode/json-server
 
@@ -47,9 +47,6 @@ https://github.com/MasonLe2497/BoilerplateReactNative
 
 https://gist.github.com/ildfreelancer/c161628115e590749599ceb6e623125c
 
-# React Native vs TypeScript
-
-https://github.com/anywhichway/nano-memoize
 
 # Update version React Native
 
