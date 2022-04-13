@@ -253,7 +253,7 @@ How to Use It
     }
   };
 
-```
+  ```
   - Store: Là nơi quản lý State, cho phép truy cập State qua getState(), update State qua dispatch(action), đăng kí listener qua subscribe(listener). Kiểu đây là nơi tạo ra vùng chứa để lưu lại state. Ví dụ dưới đây là xài AsyncStorage để lưu data vào data local ( dạng SQLITE) và dùng redux-persist để gắn async-storage và redux
   ```
   import {createStore} from 'redux';
@@ -273,7 +273,7 @@ How to Use It
     let persistor = persistStore(store);
     return {store, persistor};
   };
-```
+  ```
   - Config ở file App.js thì xem thêm trên doc nha
   - Sử dụng: 
     - import các action và react-redux
@@ -283,8 +283,7 @@ How to Use It
     - ```  
     case 'ADD_ITEM':
         return {...state, todoList: [...state.todoList, action.payload]};     
-``` 
-)
+    ``` )
 Link : https://github.com/hoanghuynh2012/Redux-Basic
 # Scale font in numbers
 
