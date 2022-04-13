@@ -223,7 +223,6 @@ How to Use It
     };
   };
 ```
-  ```
   - Reducer: đây là nơi mình sẽ thay đổi các state cục bộ dựa theo các acion khác nhau( nơi được gọi là nhận và xử lí state). Thường mình muốn lưu cái gì trong redux thì khai báo ở đây (token, rồi data local). Lúc nào cần 1 data hoặc thay đổi data đó thì chỉ cần gọi đến reducer thôi.
   ```
   const initialState = {
@@ -255,7 +254,7 @@ How to Use It
   };
 
 ```
-  - Store: : Là nơi quản lý State, cho phép truy cập State qua getState(), update State qua dispatch(action), đăng kí listener qua subscribe(listener). Kiểu đây là nơi tạo ra vùng chứa để lưu lại state. Ví dụ dưới đây là xài AsyncStorage để lưu data vào data local ( dạng SQLITE) và dùng redux-persist để gắn async-storage và redux
+  - Store: Là nơi quản lý State, cho phép truy cập State qua getState(), update State qua dispatch(action), đăng kí listener qua subscribe(listener). Kiểu đây là nơi tạo ra vùng chứa để lưu lại state. Ví dụ dưới đây là xài AsyncStorage để lưu data vào data local ( dạng SQLITE) và dùng redux-persist để gắn async-storage và redux
   ```
   import {createStore} from 'redux';
   import {userReducer} from './reducers';
@@ -286,7 +285,6 @@ How to Use It
         return {...state, todoList: [...state.todoList, action.payload]};     
 ``` 
 )
-``` 
 Link : https://github.com/hoanghuynh2012/Redux-Basic
 # Scale font in numbers
 
