@@ -280,7 +280,8 @@ How to Use It
     - const dispatch = useDispatch();
       const list = useSelector(state => state.your_list); (đây là code khai báo data local lấy từ trong redux ra.)
     - dispatch(addItem(payload)); ( đây là ví dụ khi gọi action addItem thì redux sẽ xem trong Reducer xem có action type nào là addItem sau đó đi sửa state tương ứng như trong Reducer thành payload 
-    - ```  
+    -  
+    ```  
     case 'ADD_ITEM':
         return {...state, todoList: [...state.todoList, action.payload]};     
     ``` )
