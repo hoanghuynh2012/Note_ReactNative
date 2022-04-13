@@ -37,6 +37,7 @@ https://github.com/typicode/json-server
 https://github.com/ildfreelancer/design-pattern
 
 # JavaScript Style Guide()
+
 https://github.com/airbnb/javascript
 
 # Template React native
@@ -46,7 +47,6 @@ https://github.com/MasonLe2497/BoilerplateReactNative
 # React native not running on M1
 
 https://gist.github.com/ildfreelancer/c161628115e590749599ceb6e623125c
-
 
 # Update version React Native
 
@@ -199,6 +199,90 @@ How to Use It
       });
     ```
 
+# Redux Basic
+
+ <img src="https://i.2kvn.com/img/vib-2021-3eca7a19-82be-4c9f-8bfc-cbeac838106b.png">
+ https://redux.js.org/
+- Redux là một vùng chứa trạng thái có thể dự đoán được hay còn biết đến là một thư viện của JavaScript. Cũng có thể là một nơi để lưu data local. Kiểu từ màn hình A -> màn hình B --> màn hình C. Chúng ta gửi 1 cái dữ liệu từ A --> C thì bàn đầu phải gửi cho B mà B đâu có cần xài đâu. Nên ta lưu vào trong redux và ai cần thì vào đó lấy
+- Gồm 3 phần chính:
+  - Action: Nơi mà mình định nghĩa cho các hành động mà mình sẽ sử dụng trong redux (kiểu khai báo tên hành động để sau này mình xử dụng lại ấy)
+   ```
+  export const ADD_ITEM = 'ADD_ITEM';
+  export const DELETE_ITEM = 'DELETE_ITEM';
+  export const addItem = value => {
+    return {
+      type: ADD_ITEM,
+      payload: value,
+    };
+  };
+  export const deleteItem = value => {
+    return {
+      type: DELETE_ITEM,
+      payload: value,
+    };
+  };
+```
+  - Reducer: đây là nơi mình sẽ thay đổi các state cục bộ dựa theo các acion khác nhau( nơi được gọi là nhận và xử lí state). Thường mình muốn lưu cái gì trong redux thì khai báo ở đây (token, rồi data local). Lúc nào cần 1 data hoặc thay đổi data đó thì chỉ cần gọi đến reducer thôi.
+   ```
+  const initialState = {
+    todoList: [
+      {
+        id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+        title: 'First Item',
+      },
+      {
+        id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+        title: 'Second Item',
+      },
+    ],
+  };
+  export const userReducer = (state = initialState, action) => {
+    switch (action.type) {
+      case 'ADD_ITEM':
+        return {...state, todoList: [...state.todoList, action.payload]};
+      case 'DELETE_ITEM':
+        return {
+          ...state,
+          todoList: [
+            ...state.todoList.filter(item => item?.id !== action.payload.id),
+          ],
+        };
+      default:
+        return state;
+    }
+  };
+
+```
+  - Store: : Là nơi quản lý State, cho phép truy cập State qua getState(), update State qua dispatch(action), đăng kí listener qua subscribe(listener). Kiểu đây là nơi tạo ra vùng chứa để lưu lại state. Ví dụ dưới đây là xài AsyncStorage để lưu data vào data local ( dạng SQLITE) và dùng redux-persist để gắn async-storage và redux
+  ```
+  import {createStore} from 'redux';
+  import {userReducer} from './reducers';
+  import {persistStore, persistReducer} from 'redux-persist';
+  import AsyncStorage from '@react-native-async-storage/async-storage';
+
+  const persistConfig = {
+    key: 'root',
+    storage: AsyncStorage,
+  };
+
+  const persistedReducer = persistReducer(persistConfig, userReducer);
+
+  export const configureStore = () => {
+    let store = createStore(persistedReducer);
+    let persistor = persistStore(store);
+    return {store, persistor};
+  };
+```
+  - Config ở file App.js thì xem thêm trên doc nha
+  - Sử dụng: 
+    - import các action và react-redux
+    - const dispatch = useDispatch();
+      const list = useSelector(state => state.your_list); (đây là code khai báo data local lấy từ trong redux ra.)
+    - dispatch(addItem(payload)); ( đây là ví dụ khi gọi action addItem thì redux sẽ xem trong Reducer xem có action type nào là addItem sau đó đi sửa state tương ứng như trong Reducer thành payload ```  
+    case 'ADD_ITEM':
+        return {...state, todoList: [...state.todoList, action.payload]}; ```)
+```
+Link : https://github.com/hoanghuynh2012/Redux-Basic
 # Scale font in numbers
 
 ```
