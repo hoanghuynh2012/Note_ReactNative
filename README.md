@@ -207,7 +207,7 @@ How to Use It
 - Redux là một vùng chứa trạng thái có thể dự đoán được hay còn biết đến là một thư viện của JavaScript. Cũng có thể là một nơi để lưu data local. Kiểu từ màn hình A -> màn hình B --> màn hình C. Chúng ta gửi 1 cái dữ liệu từ A --> C thì bàn đầu phải gửi cho B mà B đâu có cần xài đâu. Nên ta lưu vào trong redux và ai cần thì vào đó lấy
 - Gồm 3 phần chính:
   - Action: Nơi mà mình định nghĩa cho các hành động mà mình sẽ sử dụng trong redux (kiểu khai báo tên hành động để sau này mình xử dụng lại ấy)
-  - ```
+  ```
   export const ADD_ITEM = 'ADD_ITEM';
   export const DELETE_ITEM = 'DELETE_ITEM';
   export const addItem = value => {
@@ -222,7 +222,6 @@ How to Use It
       payload: value,
     };
   };
-  ```
   ```
   - Reducer: đây là nơi mình sẽ thay đổi các state cục bộ dựa theo các acion khác nhau( nơi được gọi là nhận và xử lí state). Thường mình muốn lưu cái gì trong redux thì khai báo ở đây (token, rồi data local). Lúc nào cần 1 data hoặc thay đổi data đó thì chỉ cần gọi đến reducer thôi.
   ```
