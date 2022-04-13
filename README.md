@@ -222,8 +222,8 @@ How to Use It
       payload: value,
     };
   };
-```
-```
+  ```
+  ```
   - Reducer: đây là nơi mình sẽ thay đổi các state cục bộ dựa theo các acion khác nhau( nơi được gọi là nhận và xử lí state). Thường mình muốn lưu cái gì trong redux thì khai báo ở đây (token, rồi data local). Lúc nào cần 1 data hoặc thay đổi data đó thì chỉ cần gọi đến reducer thôi.
   ```
   const initialState = {
